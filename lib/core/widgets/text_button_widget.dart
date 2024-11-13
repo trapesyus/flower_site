@@ -11,7 +11,7 @@ class CustomTextButton extends StatelessWidget {
       {super.key,
       required this.text,
       required this.onPressed,
-      this.color = ColorConstants.buttonColor});
+      this.color = ColorConstants.greenButtonColor});
   @override
   Widget build(BuildContext context) {
     return TextButton(

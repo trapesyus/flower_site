@@ -12,6 +12,6 @@ class CustomCircularProgress extends StatelessWidget {
 
   Center _circularProgress() {
     return const Center(
-        child: CircularProgressIndicator(color: ColorConstants.orangeColor));
+        child: CircularProgressIndicator(color: ColorConstants.buttonBgColor));
   }
 }

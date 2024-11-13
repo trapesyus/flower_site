@@ -91,7 +91,7 @@ class CustomTextFieldContactUsScreen extends StatelessWidget {
           // cursorColor: Preferences.getThemeCheck()
           //     ? ColorConstants.blueColor
           //     : ColorConstants.whiteColor,
-          cursorColor: ColorConstants.orangeColor,
+          cursorColor: ColorConstants.defaultTextColor,
           maxLines: null, // satırın aşağıya devam etmesi için max lines = null,
           inputFormatters: inputFormatters != 0
               ? [LengthLimitingTextInputFormatter(inputFormatters)]
@@ -107,15 +107,15 @@ class CustomTextFieldContactUsScreen extends StatelessWidget {
                   ? IconButton(
                       onPressed: () => isIconOnTap!() ?? () {},
                       icon: const Icon(CupertinoIcons.search),
-                      color: ColorConstants.greyColor,
+                      color: ColorConstants.defaultTextColor,
                     )
                   : null,
               focusedBorder: const OutlineInputBorder(
-                  borderSide:
-                      BorderSide(width: 1, color: ColorConstants.bgColor)),
+                  borderSide: BorderSide(
+                      width: 1, color: ColorConstants.greenButtonColor)),
               enabledBorder: const OutlineInputBorder(
-                  borderSide:
-                      BorderSide(width: 1, color: ColorConstants.bgColor)),
+                  borderSide: BorderSide(
+                      width: 1, color: ColorConstants.greenButtonColor)),
               contentPadding: EdgeInsets.only(
                 top: context.getSizeHeight(size: verticalHeight),
                 left: context.getSizeWidth(size: horizontalHeight),

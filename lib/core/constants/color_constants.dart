@@ -1,22 +1,17 @@
 import 'package:flutter/material.dart';
 
 class ColorConstants {
-  static const bgColor = Color(0xFF100A1C);
-  static const buttonColor = Color(0xFF9668EF);
+  static const whiteButtonColor = Color(0xFFEFF7F5);
+  static const greenButtonColor = Color(0xFF014B41);
+  static const textButtonColor = Color(0xFF20655B);
+  static const buttonBgColor = Color(0xFF004F44);
+  static const textFieldHintTextColor = Color(0xFF80A7A1);
+  static const smallTextColor = Color(0xFF838383);
+  static const defaultTextColor = Color(0xFF0A1E1B);
+  static const greenColor = Color(0xFF004F44);
+  static const accentGreenColor = Color(0xFF244F43);
   static const whiteColor = Color(0xFFFFFFFF);
-  static const hintTextColor = Color(0xFF322251);
-  static const greyColor = Colors.grey;
-  static const hintGreenColor = Color.fromARGB(255, 133, 156, 126);
-  static const hintOrangeColor = Color(0xFFFEF4EC);
+  static const blackColor = Color(0xFF000000);
 
-  static const hintPinkColor = Color(0xFFFEF0F2);
-  static const orangeColor = Colors.orange;
-  static const greenColor = Color(0xFF757B67);
-
-  static const siteColor = Color(0xFFF7F7F7);
-  static const cardHintBlackColor = Color(0xFF140E09);
-  static const hintCardColor = Color(0xFFF5F4F9);
-  static final homePageLastSectionColor = Colors.grey.shade200;
-  static const cardBlueColor = Color(0xFF556DC8);
-  static const cardBlueAccentColor = Color(0xFF7998EE);
+  static const accentTextColor = Colors.grey;
 }

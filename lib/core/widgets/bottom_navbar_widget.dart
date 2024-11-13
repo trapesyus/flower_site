@@ -39,14 +39,14 @@ class _NavbarPageState extends State<NavbarPage> {
       floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.orange,
           child: const Icon(CupertinoIcons.home),
-          onPressed: () =>
-              const NavbarPage().navigateToPushReplacement(context: context)),
+          onPressed: () => const NavbarPage()
+              .navigateEffectiveToPushReplacement(context: context)),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Center(
         child: _pages.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: ColorConstants.bgColor,
+        backgroundColor: ColorConstants.blackColor,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -60,7 +60,7 @@ class _NavbarPageState extends State<NavbarPage> {
         elevation: 0,
         currentIndex: _selectedIndex,
         selectedItemColor: ColorConstants.whiteColor,
-        unselectedItemColor: ColorConstants.greyColor,
+        unselectedItemColor: ColorConstants.smallTextColor,
         onTap: _onItemTapped,
       ),
     );

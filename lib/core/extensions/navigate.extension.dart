@@ -1,17 +1,77 @@
 import 'package:flutter/material.dart';
 
-extension NavigateTo on Widget {
-  Future navigateTo({required BuildContext context}) =>
-      Navigator.push(context, MaterialPageRoute(builder: (context) => this));
+extension NavigateEffectiveTo on Widget {
+  Future navigateEffectiveTo({required BuildContext context}) async =>
+      await Navigator.push(
+          context,
+          PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) => this,
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              var begin = const Offset(-1.0, 0.0);
+              var end = Offset.zero;
+              var curve = Curves.ease;
+
+              var tween =
+                  Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+              var offsetAnimation = animation.drive(tween);
+
+              return SlideTransition(
+                position: offsetAnimation,
+                child: child,
+              );
+            },
+          ));
 }
 
-extension NavigateToPushReplacement on Widget {
-  Future navigateToPushReplacement({required BuildContext context}) =>
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => this));
+extension NavigateEffectiveToPushReplacement on Widget {
+  Future navigateEffectiveToPushReplacement(
+          {required BuildContext context}) async =>
+      await Navigator.pushReplacement(
+        context,
+        PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) => this,
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            var begin = const Offset(-1.0, 0.0);
+            var end = Offset.zero;
+            var curve = Curves.ease;
+
+            var tween =
+                Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+            var offsetAnimation = animation.drive(tween);
+
+            return SlideTransition(
+              position: offsetAnimation,
+              child: child,
+            );
+          },
+        ),
+      );
 }
 
-extension NavigateToBack on Widget {
-  void navigateToBack({required BuildContext context}) =>
-      Navigator.pop(context);
+extension NavigateEffectiveToBack on Widget {
+  Future navigateEffectiveToBack({required BuildContext context}) async =>
+      await Navigator.pushReplacement(
+        context,
+        PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) => this,
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            var begin = const Offset(-1.0, 0.0);
+            var end = Offset.zero;
+            var curve = Curves.ease;
+
+            var tween =
+                Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+            var offsetAnimation = animation.drive(tween);
+
+            return SlideTransition(
+              position: offsetAnimation,
+              child: child,
+            );
+          },
+        ),
+      );
 }

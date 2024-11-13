@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "704911687004",
+    "firebase_url": "https://app-exam-5cc5d-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "app-exam-5cc5d",
+    "storage_bucket": "app-exam-5cc5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704911687004:android:54f4bc4c82c8d3d5845599",
+        "android_client_info": {
+          "package_name": "com.example.flower_site"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "704911687004-jkhe955dc5o5u8lvgbi7vmsqpph2jo84.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAIVpZYPlbjWrSDSQPhAljTXmbyP3atIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "704911687004-jkhe955dc5o5u8lvgbi7vmsqpph2jo84.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "704911687004-dpcq15tmd73u6ln6i29u702enum6krhc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.appExample"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

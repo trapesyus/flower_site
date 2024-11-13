@@ -78,7 +78,7 @@ class CustomTextField extends StatelessWidget {
               // color: Preferences.getThemeCheck()
               //     ? ColorConstants.blackColor
               //     : Colors.white,
-              color: ColorConstants.bgColor,
+              color: ColorConstants.whiteColor,
               // fontFamily: TextFonts.fontChoice[Preferences.fontName],
               fontSize: fontSize,
               decoration: isUnderline ? TextDecoration.underline : null,
@@ -93,7 +93,7 @@ class CustomTextField extends StatelessWidget {
           // cursorColor: Preferences.getThemeCheck()
           //     ? ColorConstants.blueColor
           //     : ColorConstants.whiteColor,
-          cursorColor: ColorConstants.orangeColor,
+          cursorColor: ColorConstants.smallTextColor,
           maxLines: 1, // satırın aşağıya devam etmesi için max lines = null,
           inputFormatters: inputFormatters != 0
               ? [LengthLimitingTextInputFormatter(inputFormatters)]
@@ -109,15 +109,15 @@ class CustomTextField extends StatelessWidget {
                   ? IconButton(
                       onPressed: () => isIconOnTap!() ?? () {},
                       icon: const Icon(CupertinoIcons.search),
-                      color: ColorConstants.greyColor,
+                      color: ColorConstants.whiteButtonColor,
                     )
                   : null,
               focusedBorder: const OutlineInputBorder(
-                  borderSide:
-                      BorderSide(width: 1, color: ColorConstants.bgColor)),
+                  borderSide: BorderSide(
+                      width: 1, color: ColorConstants.smallTextColor)),
               enabledBorder: const OutlineInputBorder(
-                  borderSide:
-                      BorderSide(width: 1, color: ColorConstants.bgColor)),
+                  borderSide: BorderSide(
+                      width: 1, color: ColorConstants.smallTextColor)),
               contentPadding: EdgeInsets.only(
                 top: context.getSizeHeight(size: verticalHeight),
                 left: context.getSizeWidth(size: horizontalHeight),
@@ -128,7 +128,8 @@ class CustomTextField extends StatelessWidget {
               labelText: label ?? '',
               labelStyle: labelStyle
                   ? const TextStyle(
-                      color: ColorConstants.greyColor,
+                      color: ColorConstants.whiteColor,
+
                       // fontFamily: TextFonts.fontChoice[Preferences.fontName]
                     )
                   : null,
@@ -139,7 +140,7 @@ class CustomTextField extends StatelessWidget {
               ),
               hintStyle: hintTextStyle
                   ? const TextStyle(
-                      color: ColorConstants.bgColor,
+                      color: ColorConstants.whiteColor,
                       // fontFamily: TextFonts.fontChoice[Preferences.fontName]
                     )
                   : null,

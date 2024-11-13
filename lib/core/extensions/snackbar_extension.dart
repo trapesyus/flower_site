@@ -11,7 +11,7 @@ extension SnackBarExtension on BuildContext {
           text: content,
           color: ColorConstants.whiteColor,
         )),
-        backgroundColor: ColorConstants.orangeColor,
+        backgroundColor: ColorConstants.buttonBgColor,
         duration: const Duration(seconds: 2),
         elevation: 0,
         shape: const BeveledRectangleBorder(

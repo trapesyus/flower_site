@@ -30,7 +30,7 @@ class CustomLabelText extends StatelessWidget {
           fontSize: fontSize,
           fontFamily: GoogleFonts.merriweather().fontFamily,
           color: isColorNotWhite
-              ? ColorConstants.bgColor
+              ? ColorConstants.defaultTextColor
               : ColorConstants.whiteColor,
           fontWeight: FontWeight.bold),
     );

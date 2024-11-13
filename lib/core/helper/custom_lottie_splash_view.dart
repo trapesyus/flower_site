@@ -16,7 +16,7 @@ class CustomLottieSplashView extends StatelessWidget {
           alignment: Alignment.center,
           width: context.getSizeWidth(size: 1),
           height: context.getSizeHeight(size: 1),
-          decoration: const BoxDecoration(color: ColorConstants.siteColor),
+          decoration: const BoxDecoration(color: ColorConstants.whiteColor),
           child: Lottie.asset('assets/lottie/initialize.json',
               filterQuality: FilterQuality.high,
               fit: BoxFit.cover,

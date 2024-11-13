@@ -27,7 +27,7 @@ class CustomCardText extends StatelessWidget {
     return Text(text,
         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
             fontFamily: GoogleFonts.merriweather().fontFamily,
-            color: isContentColor ? ColorConstants.buttonColor : null,
+            color: isContentColor ? ColorConstants.whiteButtonColor : null,
             decoration: isUnderline ? TextDecoration.underline : null,
             fontWeight: isBold ? FontWeight.bold : null,
             fontStyle: isItalic ? FontStyle.italic : null,
