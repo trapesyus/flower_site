@@ -13,17 +13,14 @@ class SignUpService {
   final DatabaseService _databaseService = DatabaseService();
   final tempLatitude = 41.015137;
   final tempLongtitude = 28.979530;
-  Future<void> signUpWithEmailAndPassword(
-      {required String email,
-      required String image,
-      required String password,
-      required BuildContext context,
-      required String adSoyad,
-      required String gender,
-      required String age,
-      required String plaka,
-      double? latitude,
-      double? longtitude}) async {
+  Future<void> signUpWithEmailAndPassword({
+    required String email,
+    required String password,
+    required BuildContext context,
+    required String adSoyad,
+    required String gender,
+    required String age,
+  }) async {
     const String url =
         'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${FirebaseProjectApiConstants.webApi}';
 
@@ -45,16 +42,12 @@ class SignUpService {
           'adSoyad': adSoyad,
           'age': age,
           'gender': gender,
-          'plaka': plaka,
-          'image': image,
-          'latitude': latitude ?? tempLatitude,
-          'longtitude': longtitude ?? tempLongtitude,
           'idToken': data.idToken,
           'email': data.email,
           'localId': data.localId,
           'createdAt': DateTime.now().toIso8601String(),
         };
-        await SharedPreferencesOperate.getLocalId(localId: data.localId);
+        await SharedPreferencesOperate.setLocalId(localId: data.localId);
         if (context.mounted) {
           await _databaseService.postUserData(data.localId, userData, context);
         }
@@ -66,7 +59,7 @@ class SignUpService {
       } else {
         print('Kayıt işlemi başarısız: ${response.statusMessage}');
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       if (e.response != null) {
         print('Hata: ${e.response?.data}');
       } else {

@@ -1,9 +1,11 @@
 import 'dart:ui';
 
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flower_site/core/constants/color_constants.dart';
 import 'package:flower_site/firebase_options.dart';
 import 'package:flower_site/screen/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
